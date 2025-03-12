@@ -1,0 +1,43 @@
+/*设置默认的字号和字体*/
+html {
+    font-size: 10px; /* px 表示“像素（pixel）”: 基础字号为 10 像素 */
+    font-family: "Noto Serif SC", serif;
+}
+
+
+h1{
+    font-size: 60px;
+    text-align: center;  /*设置字体大小和位置*/
+}
+
+p,
+li{
+    font-size: 16px;
+    line-height: 2;
+    letter-spacing: 1px;  /*设置字体大小和行高、字间距*/
+}
+
+html {
+    background-color: #FBF0DD;
+}
+
+body{
+    width: 600px;   /*文档体保持600像素宽*/
+    margin: 0 auto;  /*第一个值影响上下，第二个影响左右，auto为平均分*/
+    background-color: #9DBBFF;
+    padding: 0 20px 20px 20px;  /*内边距*/
+    border: 5px solid #998E84;  /*边框的宽度*/
+}
+
+h1{
+    margin: 0; /*正文与标题的间距*/
+    padding: 20px 0;  /*标题的上下内边距*/
+    color: #FBF0DD;
+    text-shadow: 3px 3px 1px #998E84;  /*施加阴影*/
+}
+
+img{
+    width: 300px;
+    display: block; /*将img设为block块级元素*/
+    margin: 0 auto; /*使图片居中*/
+}
