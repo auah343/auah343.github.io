@@ -1,17 +1,37 @@
 <!doctype html>
-<html lang="en-US">
+<html lang="zh-CN">
   <head>
     <meta charset="utf-8" />                  
     <meta name="viewport" content="width=device-width" />
-    <title>My test page</title>
+    <meta name="description" content="一个无聊的人做的一个无聊的网站，现在这个人正在打哈欠。"/>
+    <title>小草房</title>
     <link
             href="styles/style.css"
             rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@500&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/icon2.jpg" >
   </head>
   <body>
+    <header>
     <h1>小草房</h1>
-    <img src="images/snow.jpg" alt="阳光下地铁出口顶上的雪" />
+<!--    <img src="images/dog.jpg" alt="小柴犬"-->
+<!--    width="300" height="300">-->
+    </header>
+
+    <main>
+      <video controls width="600" muted>
+        <source src="videos/lastnight.mp4" type="video/mp4"/>
+        <p>
+          你的浏览器不支持HTML视频。可点击<a href="https://www.bilibili.com/video/BV1aUApeJEw6/?spm_id_from=333.1007.tianma.7-1-20.click">此链接</a>观看。
+        </p>
+          <track kind="captions" src="videos/lastnight.vtt" srclang="en" label="English" />
+      </video>
+        <p>夏天要过去了。</p>
+        <audio controls >
+            <source src="audios/summernight.mp3" type="audio/mp3"/>
+            <p>你的浏览器不支持该音频，可点击<a href="audios/summernight.mp3">此链接</a>收听。</p>
+        </audio>
+      <article>
     <p>存放我喜欢的东西。</p>
     <p>每天要做的事：</p>
     <ul>
@@ -22,9 +42,48 @@
     <p>每天坚持做这三件事，使我变成了一个有毅力的人。</p>
     <p>自从我学会了上网，我每天都会访问的网站有：</p>
     <ul>
-    <li><a href="https://www.msn.cn/zh-cn/weather/forecast">预知未来的魔法球</a></li>
+    <li><a href="https://www.msn.cn/zh-cn/weather/forecast" title="你不会想知道这是什么" target="_blank">预知未来的魔法球</a></li>
     </ul>
-  </body>
-  <button>Change user</button>
-  <script src="scripts/main.js"></script>
-</html>
+      </article>
+    <p>我一天的行程通常是：</p>
+    <ol>
+      <li>感知我醒了</li>
+      <li>睁开眼睛</li>
+      <li>使用手机查看时间</li>
+      <li>趴着缓冲</li>
+    </ol>
+        <img src="images/dog.jpg" alt="小柴犬"
+      width="10">
+        </article>
+    </main>
+    <footer>
+        <form action="https://formsubmit.co/2905761372@qq.com" method="POST">
+            <h2>留言区</h2>
+            <fieldset>
+            <legend>如果你有想对我说的话，请填写以下表单，我会第一时间回复你！</legend>
+            <div>
+                昵称：
+                <br>
+                <input type="text" name="name" required>
+                <br>
+                电子邮件地址：
+                <br>
+                <input type="email" name="email" required>
+                <br>
+                日期：
+                <br>
+                <input type="date" name="data">
+                <br>
+                想说的话：
+                <br>
+                <textarea name="message" required></textarea>
+                <br><br>
+                <button type="submit">提交</button>
+            </div>
+            </fieldset>
+        </form>
+        </footer>
+          </body>
+          <button>Change user</button>
+          <script src="scripts/main.js" defer></script>
+        </html>
