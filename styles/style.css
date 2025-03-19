@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+}
+
+
+ .image-container img {
+     width: 100vw;
+     height: 100vh;
+     object-fit: cover; /* 保持图片比例，填充屏幕 */
+     z-index: -1;
+ }
+
+
+.video-container video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 小人 */
+.character {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: url('../images/character.png') no-repeat center/cover;
+    z-index: 999; /* 让小人在最上层 */
+}
+
+.house {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background-size: cover; /* 保证图片填充 */
+    background-position: center;
+    z-index: 15;
+}
+

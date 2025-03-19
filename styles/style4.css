@@ -1,0 +1,308 @@
+/*!* 文章容器 *!*/
+/*.article-container {*/
+/*    background: rgba(255, 255, 255, 0.9);*/
+/*    padding: 30px;*/
+/*    border-radius: 15px;*/
+/*    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);*/
+/*    margin-top: 30px;*/
+/*}*/
+
+/*.article-card {*/
+/*    background: white;*/
+/*    padding: 25px;*/
+/*    margin-bottom: 25px;*/
+/*    border-radius: 12px;*/
+/*    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);*/
+/*    transition: transform 0.2s;*/
+/*}*/
+
+/*.article-card:hover {*/
+/*    transform: translateY(-3px);*/
+/*}*/
+
+/*.article-header {*/
+/*    display: flex;*/
+/*    justify-content: space-between;*/
+/*    align-items: center;*/
+/*    margin-bottom: 15px;*/
+/*    border-bottom: 2px solid #eee;*/
+/*    padding-bottom: 10px;*/
+/*}*/
+
+/*.article-header h2 {*/
+/*    color: #2c3e50;*/
+/*    margin: 0;*/
+/*    font-size: 1.8em;*/
+/*}*/
+
+/*.article-date {*/
+/*    color: #7f8c8d;*/
+/*    font-size: 0.9em;*/
+/*}*/
+
+/*.article-content {*/
+/*    line-height: 1.8;*/
+/*    color: #34495e;*/
+/*    font-size: 16px;*/
+/*}*/
+
+/*.article-footer {*/
+/*    margin-top: 20px;*/
+/*    display: flex;*/
+/*    justify-content: flex-end;*/
+/*}*/
+
+/*.like-btn {*/
+/*    background: none;*/
+/*    border: 2px solid #ff6b6b;*/
+/*    padding: 8px 20px;*/
+/*    border-radius: 20px;*/
+/*    cursor: pointer;*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*    gap: 8px;*/
+/*    transition: all 0.3s;*/
+/*}*/
+
+/*.like-btn:hover {*/
+/*    background: #ff6b6b22;*/
+/*}*/
+
+/*.like-count {*/
+/*    color: #ff6b6b;*/
+/*    font-weight: bold;*/
+/*}*/
+
+/*.like-icon {*/
+/*    font-size: 1.2em;*/
+/*}*/
+
+body {
+    background-image: url('../images/door1.jpg'); /* 修改为你的图片路径 */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    min-height: 100vh;
+    padding: 20px;
+    position: relative;
+}
+
+.container {
+
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.form-container {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 30px;
+    font-size: 2.5em;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* 在原有样式基础上添加 */
+.form-group:last-child {
+    text-align: center;
+    margin-top: 25px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #34495e;
+    font-weight: 500;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: #83a4d4;
+}
+
+textarea {
+    height: 120px;
+    resize: vertical;
+}
+
+button {
+    background: #83a4d4;
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: transform 0.2s, background 0.3s;
+    display: block; margin: 20px auto;
+}
+
+button:hover {
+    background: #6a8bbe;
+    transform: translateY(-2px);
+}
+/* 成功提示框 */
+/*.success-message {*/
+/*    display: none;*/
+/*    background: #4caf50;*/
+/*    color: white;*/
+/*    padding: 10px;*/
+/*    border-radius: 10px;*/
+/*    margin-top: 10px;*/
+/*}*/
+
+.success-message {
+    position: fixed;  /* 改为固定定位 */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* 精确居中 */
+    background: #4caf50;
+    color: white;
+    padding: 20px 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;    /* 确保在最上层 */
+    display: none;
+    /* 添加动画效果 */
+    animation: fadeInOut 3s ease-in-out;
+}
+
+@keyframes fadeInOut {
+    0% { opacity: 0; transform: translate(-50%, -60%); }
+    10% { opacity: 1; transform: translate(-50%, -50%); }
+    90% { opacity: 1; transform: translate(-50%, -50%); }
+    100% { opacity: 0; transform: translate(-50%, -60%); }
+}
+
+.message-list {
+    margin-top: 30px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.message-card {
+    background: white;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.error {
+    color: #e74c3c;
+    font-size: 0.9em;
+    margin-top: 5px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+
+    input, textarea {
+        width: 100%;
+    }
+}
+/* 文章容器 */
+.article-container {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+}
+
+.article-card {
+    background: white;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.article-card:hover {
+    transform: translateY(-3px);
+}
+
+.article-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+}
+
+.article-header h2 {
+    color: #2c3e50;
+    margin: 0;
+    font-size: 1.8em;
+}
+
+.writer{
+    text-align: center;
+}
+
+
+.article-date {
+    color: #7f8c8d;
+    font-size: 0.9em;
+}
+
+.article-content {
+    line-height: 1.8;
+    color: #34495e;
+    font-size: 16px;
+}
+
+.article-footer {
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.like-btn {
+    background: none;
+    border: 2px solid #ff6b6b;
+    padding: 8px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s;
+}
+
+.like-btn:hover {
+    background: #ff6b6b22;
+}
+
+.like-count {
+    color: #ff6b6b;
+    font-weight: bold;
+}
+
+.like-icon {
+    font-size: 1.2em;
+}
